@@ -1,3 +1,10 @@
-<p>
-  input works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Update Username with two-way data binding</label>
+      <input type="text" class="form-control" [(ngModel)]="content" (input)="isInputEmpty()">
+      <h2 style="text-align: center">{{content}}</h2>
+      <button class="btn btn-primary" [disabled]="!clickable" (click)="content=''">Flush the username</button>
+    </div>
+  </div>
+</div>

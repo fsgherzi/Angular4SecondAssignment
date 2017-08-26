@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
+  content: string;
+  clickable = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  isInputEmpty() {
+
+    if (this.content === '') {
+      return this.clickable = false;
+    }
+    return this.clickable = true;
   }
 
 }
